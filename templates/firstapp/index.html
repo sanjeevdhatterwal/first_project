@@ -1,0 +1,22 @@
+{%extends 'firstapp/base.html'%} 
+{%block head%} 
+<!-- <style>
+    .bold{
+        font-style: italic;
+        color: blue;
+    }
+</style> -->
+
+{%endblock%}
+{% block body%}
+{% include 'firstapp/navbar.html' %} 
+<ul class="collection with-header"> Counting
+    {%for c in counts%}
+    <li class="collection-item"><div>{{c}}<a href="#!" class="secondary-content"><i class="material-icons"></i></a></div></li>
+    {%endfor%} 
+  </ul>
+<h1>Hello World!!</h1>
+    {%if show %} 
+        <span>Developed by: {{develop}}</span>
+    {%endif%}
+{%endblock%}
